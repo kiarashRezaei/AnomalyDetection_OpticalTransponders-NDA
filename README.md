@@ -64,11 +64,11 @@ Transfer learning techniques are explored to improve the detection of anomalies 
 
 **Approach:**
 
-###1- Pure TL:  
+### 1- Pure TL:  
 
 We performed training and hyper parameter tuning on the domain A, evaluated the model on a testset containing images from domain B
 
-###2- Domain adaptation:
+### 2- Domain adaptation:
 
 a) We performed training and hyper parameter tuning on the domain A.
 b) In each step, the model is re-trained using batches of 10 images from the domain B (16steps).
@@ -79,10 +79,10 @@ c) We evaluate the resulting models on a test set of unseen images belong to dom
 An alternative approach based on covariance feature space is considered for anomaly detection.
 **Approach:** 
 
-###1- extract statistical features (Mean, Variance, skewness and Kurtosis) of images along the column, in both spatial and Fourier domain.
-###2- Create a new feature space based on the covariance matrix of each feature vector of each image and check the sparebility of this new feature space
-###3- PCA
-###4- Training both models on the covariance feature space (with and without PCA)
+### 1- extract statistical features (Mean, Variance, skewness and Kurtosis) of images along the column, in both spatial and Fourier domain.
+### 2- Create a new feature space based on the covariance matrix of each feature vector of each image and check the sparebility of this new feature space
+### 3- PCA
+### 4- Training both models on the covariance feature space (with and without PCA)
 
 ## Explainable Artificial Intelligence (XAI): GradCAM
 
