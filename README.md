@@ -24,9 +24,8 @@ The aim of this project is to detect anomalies in optical transponder signals us
 The dataset is sourced from [Constellation Diagrams for Spectrum Anomaly Detection in Optical Networks](https://ieee-dataport.org/open-access/constellation-diagrams-spectrum-anomaly-detection-optical-networks) (F. Musumeci: Network Data Analysis Laboratory). It contains images of the 16QAM constellation at the receiver of the Channel Under Test (CUT), annotated with 5 classes for normal and faulty signal conditions.
 Two datasets are used for the project:
 
-1. Full Image Dataset:
+1. Full Image Dataset (from 2 Different Domains):
    - Constellation diagrams of the 16QAM receiver at the Channel Under Test (CUT).
-   - Five classes: 2 normal classes, 3 faulty classes.
 
 2. One-Symbol Image Dataset (from 2 Different Domains):
    - Extracted from full images, focusing on a single symbol in the 16QAM constellation.
@@ -63,7 +62,9 @@ The results obtained from different algorithms and datasets are compared to dete
 
 Transfer learning techniques are explored to improve the detection of anomalies in optical transponder signals.
 **Approach:**
+
 1- Pure TL: We performed training and hyper parameter tuning on the domain A, evaluated the model on a testset containing images from domain B
+
 2- Domain adaptation:
 a) We performed training and hyper parameter tuning on the domain A
 b) In each step, the model is re-trained using batches of 10 images from the domain B (16
@@ -73,7 +74,8 @@ c) We evaluate the resulting models on a test set of unseen images belong to dom
 ## Alternative: Covariance Feature Space
 
 An alternative approach based on covariance feature space is considered for anomaly detection.
-**Approach:**
+**Approach:** 
+
 1- extract statistical features (Mean, Variance, skewness and Kurtosis) of images along the column, in both spatial and Fourier domain.
 2- Create a new feature space based on the covariance matrix of each feature vector of each image and check the sparebility of this new feature space
 3- PCA
