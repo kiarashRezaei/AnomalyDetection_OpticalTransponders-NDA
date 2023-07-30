@@ -61,11 +61,15 @@ The results obtained from different algorithms and datasets are compared to dete
 ## Transfer Learning
 
 Transfer learning techniques are explored to improve the detection of anomalies in optical transponder signals.
+
 **Approach:**
 
-1- Pure TL: We performed training and hyper parameter tuning on the domain A, evaluated the model on a testset containing images from domain B
+1- Pure TL: 
+
+We performed training and hyper parameter tuning on the domain A, evaluated the model on a testset containing images from domain B
 
 2- Domain adaptation:
+
 a) We performed training and hyper parameter tuning on the domain A
 b) In each step, the model is re-trained using batches of 10 images from the domain B (16
 steps)
