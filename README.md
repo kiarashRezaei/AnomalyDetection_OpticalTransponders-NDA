@@ -70,7 +70,7 @@ We performed training and hyper parameter tuning on the domain A, evaluated the 
 
  **2- Domain adaptation:**
 
-a) We performed training and hyper parameter tuning on the domain A.
+a) We performed training and hyper parameter tuning on the domain A. \n
 b) In each step, the model is re-trained using batches of 10 images from the domain B (16steps).
 c) We evaluate the resulting models on a test set of unseen images belong to domain B.
 
